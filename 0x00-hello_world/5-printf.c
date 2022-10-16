@@ -1,15 +1,12 @@
 #include <stdio.h>
-
 /**
- * main - Print a string
- * Description: use printf
- * Return: 0
- */
-
+*main - Main function
+*
+*
+*Return: return 0 everytime
+*/
 int main(void)
 {
-	printf("%s", "with proper grammar, but the outcome is a piece of art,\n");
+	printf("with proper grammar, but the outcome is a piece of art,\n");
 	return (0);
 }
-Footer
-© 2022 GitHub, 
