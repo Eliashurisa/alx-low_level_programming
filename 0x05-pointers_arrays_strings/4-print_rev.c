@@ -3,30 +3,16 @@
 * print_rev - prints a string in reverse
 * @s: string to print
 */
-
-void print_rev(char *s)
+void reverse_array(int *a, int n)
 {
-int len = 0, index = 0;
-len = _strlen(s);
+	int i, temp;
 
-for (index = len - 1; index >= 0; index--)
-_putchar(s[index]);
-
-_putchar('\n');
-}
-
-/**
- *_strlen - returns the length of a string
- * @s: string
- *Return: returns lenght;
- */
-int _strlen(char *s)
-{
-int count, inc;
-inc = 0;
-for (count = 0; s[count] != '\0'; count++)
-inc++;
-
-return (inc);
+	for (i = 0; i < n; i++)
+	{
+		n--;
+		temp = a[i];
+		a[i] = a[n];
+		a[n] = temp;
+	}
 }
 
