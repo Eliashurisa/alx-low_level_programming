@@ -1,12 +1,18 @@
 #include "main.h"
-char *string_toupper(char *n)
-{
-	int i;
-
-	for (i = 0; n[i] != '\0'; i++)
+void rev_string(char *s)
 	{
-		if (n[i] >= 'a' && n[i] <= 'z')
-			n[i] = n[i] - 32;
+		char rev = s[0];
+		int fcounter = 0;
+		int i;
+
+		while (s[fcounter] != '\0')
+			fcounter++;
+
+		for (i = 0; i < fcounter; i++)
+		{
+			fcounter--;
+			rev = s[i];
+			s[i] = s[fcounter];
+			s[fcounter] = rev;
+		}
 	}
-	return (n);
-}

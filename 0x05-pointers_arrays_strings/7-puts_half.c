@@ -1,21 +1,20 @@
 #include "main.h"
-char *leet(char *n)
+void puts_half(char *str)
 {
-	int i, x;
-	int find[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
-	int replacer[] = {'4', '3', '0', '7', '1'};
 
-	for (i = 0; n[i] != '\0'; i++)
-	{
-		for (x = 0; x <= 9; x++)
-		{
-			if (n[i] == find[x])
-			{
-				n[i] = replacer[x / 2];
-				x = 9;
-			}
-		}
-	}
+	int n, m, len;
 
-	return (n);
+	len = 0;
+
+	for (n = 0; str[n] != '\0'; n++)
+		len++;
+
+	m = (len / 2);
+
+	if ((len % 2) == 1)
+		m = ((len + 1) / 2);
+
+	for (n = m; str[n] != '\0'; n++)
+		_putchar(str[n]);
+	_putchar('\n');
 }
